@@ -1,0 +1,56 @@
+@import "../../styles/util";
+
+.services {
+    color: $secondary;
+
+    &_ttl {
+        text-align: center;
+        color: $primary;
+        margin-bottom: 50px;
+        .ttl{
+            font-weight: 600;
+        }
+    }
+    .row{
+        row-gap: 30px;
+
+    }
+.car_wrap{
+    height: auto;
+    &:nth-child(2n){
+        .card{
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+    .card {
+        background-color: #141414;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            left: 0;
+            height: 85%;
+            bottom: 0;
+            background: linear-gradient(360deg, rgba(1, 239, 255, 0.3) 35%, rgba(2, 0, 36, 0.1) 100%);
+        }
+       
+
+        &_img {
+            font-size: 50px;
+            color: $primary;
+        }
+
+    }
+}

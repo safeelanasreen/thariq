@@ -1,0 +1,82 @@
+
+@import "../../styles/util";
+.header{
+    padding:20px 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    transition: 0.2s ease-in-out;
+    z-index: 555;
+    background-color:$primary-dark;
+
+    &.active{
+        box-shadow: 0 1px 3px -1px rgb(255 255 255 / 16%);
+    
+    
+    }
+
+    .logo_area{
+        max-width: 60px;
+        max-height: 55px;
+        width: 60px;
+        height: 55px;
+        display: block;
+        flex: 0 0 10%;
+    }
+    nav{
+        ul{
+            margin: 0;
+            padding-left: 0;
+            flex: 0 0 88%;
+            column-gap: 25px;
+
+
+            li{
+                list-style: none;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: #ffffff !important;
+                    font-size: 18px;
+                    font-weight: 500;
+                    transition: 0.2s ease-in;
+                    cursor: pointer;
+                    &:hover{
+                        @include min(1200){
+                            color: $primary !important;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+.offcanvas_wrap{
+    button{
+        padding: 0;
+        background-color: transparent !important;
+        border: none;
+
+        span{
+            width: 50px;
+            height: 3px;
+            background-color: $primary;
+            display: block;
+            + span{
+                width: 40px;
+                margin-top: 10px;
+                +span{
+                    width: 25px;
+                    margin-top: 10px;
+
+                }
+            }
+        }
+    }
+    .offcanvas_body{
+        background-color: #fff;
+
+    }
+}

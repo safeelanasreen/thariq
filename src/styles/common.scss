@@ -1,0 +1,451 @@
+@import "./util";
+
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "white": #fff,
+);
+
+$colors: (
+  "green": var(--primary),
+  "green-dark": $primary-dark,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  xxl: 1580px,
+);
+
+$btn-padding-y: size(10);
+
+$primary: $primary;
+
+// $prefix: mex-;
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+      margin-left: $caret-spacing;
+      background-color: red;
+      vertical-align: $caret-vertical-align;
+      content: "";
+
+      @if $direction ==down {
+        @include caret-down();
+      }
+
+      @else if $direction ==up {
+        @include caret-up();
+      }
+
+      @else if $direction ==end {
+        @include caret-end();
+      }
+    }
+
+    @if $direction ==start {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $caret-spacing;
+        vertical-align: $caret-vertical-align;
+        content: "";
+        @include caret-start();
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}
+
+// Bootstrap scss-docs-start import-stack
+// @import "~bootstrap/scss/mixins/banner";
+// @include bsBanner("");
+// Configuration
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+$enable-dark-mode: false;
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+// @import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+// @import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+// @import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+// @import "~bootstrap/scss/alert";
+// @import "~bootstrap/scss/progress";
+// @import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+// @import "~bootstrap/scss/placeholders";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+// Bootstrap scss-docs-end import-stack
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: initial;
+  }
+}
+
+html,
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  position: relative;
+
+  @include max(991.98) {
+    --header-height: 78px;
+  }
+
+  @include min(1600) {
+    font-size: 18px;
+  }
+
+  scroll-padding-top: 120px !important;
+
+  .dropdown-open {
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 12;
+      -webkit-overflow-scrolling: none;
+      overflow: hidden;
+      -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+    }
+  }
+}
+
+main {
+  // padding-top: var(--header-height);
+  padding-top: 87px;
+  z-index: 1;
+  // overflow-x: hidden;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  @include max(991.98) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+p {
+  @include lineHeight(18, 32);
+  font-size: 1rem;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
+}
+
+.ttl-white {
+  color: #fff
+}
+
+.h1 {
+  @include lineHeight(65, 82);
+  font-size: 42px;
+  font-weight: 700;
+
+  @include min(992) {
+    font-size: size(45);
+  }
+
+  @include min(1200) {
+    font-size: size(60);
+  }
+
+  @include min(1600) {
+    font-size: size(65);
+  }
+}
+
+.h2 {
+  @include lineHeight(50, 63);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+
+  @include min(992) {
+    font-size: size(38);
+  }
+
+  @include min(1200) {
+    font-size: size(50);
+  }
+}
+
+.h3 {
+  @include lineHeight(45, 63);
+  font-size: 26px;
+
+  @include min(992) {
+    font-size: size(36);
+  }
+
+  @include min(1200) {
+    font-size: size(45);
+  }
+}
+
+.h4 {
+  font-size: 24px;
+
+  @include min(992) {
+    font-size: size(18);
+  }
+
+  @include min(1200) {
+    font-size: size(34);
+  }
+}
+
+.h5 {
+  font-size: 18px;
+
+  @include min(992) {
+    font-size: size(22);
+  }
+}
+
+.h6 {
+  font-size: 16px;
+
+  @include min(992) {
+    font-size: size(18);
+  }
+}
+
+.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+@include min(1200) {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: #ccc;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    border-radius: 0px;
+  }
+}
+
+.btn {
+  &-sm {
+    --bs-btn-padding-y: 0.4722rem;
+    --bs-btn-padding-x: 1.1111rem;
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 400 !important;
+  }
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+body{
+  background-color:$primary-dark;
+  font-family: "Poppins", sans-serif;
+}
+
+
+ a{
+  text-decoration: none;
+ }
+
+.main{
+  padding-top: 95px;
+}
+
+section{
+  overflow: hidden;
+  padding: 40px 0;
+  @include min(992){
+    padding: size(70) 0;
+  }
+  @include min(1200){
+    padding: size(90) 0;
+  }
+}
+ 
+.swiper-button-prev,.swiper-button-next{
+background-color: rgb(255, 255, 255,0.5);
+width: 50px !important;
+height: 50px !important;
+border-radius: 50% !important;
+transition: all 0.2s ease-in-out;
+&::after{
+  font-size: 20px !important;
+  color:$white !important
+
+}
+&:hover{
+  @include min(1200){
+    background-color: rgb(255, 255, 255,0.7);
+  }
+}
+}
+
+
+
+
+
+html{
+  scroll-behavior: smooth !important;
+}
+
+.anim{
+  opacity: .001;
+  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+  transform: scale(.96) translateY(24px);
+  .about-shape1{
+    transform: scale(.5) translateX(100%);
+    transition: all .5s cubic-bezier(.43,.08,.41,.78) .02s;
+  }
+  .about-shape2{
+    transform: scale(.5) translateX(-100%);
+    transition: all .5s cubic-bezier(.43,.08,.41,.78) .02s;
+  }
+  &.visible{
+  
+      visibility: visible !important;
+      opacity: 1 !important;
+        transform: scale(1) translateY(0) !important;
+        .about-shape1, .about-shape2{
+          transform: scale(1) translateX(0%);
+
+        }
+  }
+
+
+}   
+
+
+.offcanvas{
+  background-color: #222734;
+  color: $white;
+  padding: 15px;
+  .btn-close{
+    filter:invert(1)
+  }
+  ul{
+padding: 0;
+margin: 0;
+li{
+  list-style: none;
+  margin-bottom: 15px;
+  a{
+    font-size: 20px;
+  }
+}
+
+  }
+}
+
+
+
+
+
+
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

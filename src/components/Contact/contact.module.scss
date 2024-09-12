@@ -1,0 +1,81 @@
+@import "../../styles/util";
+.contact{
+    color: $white;
+    border-top: 2px solid hsla(0, 0%, 100%, .04);
+    ul{
+        column-gap: 40px;
+        justify-content: center;
+        row-gap: 30px;
+        margin-bottom: 0;
+        padding-left: 0;
+        li{
+            list-style: none;
+        }
+    }
+    .contact_wrap{
+       span{
+        color: #EEEEEE;
+        transition: 0.2s ease-in-out;
+       }
+       a{
+        &:hover{
+            @include min(1200){
+                span{
+                    color:$primary;
+                }
+            }
+        }
+       }
+       ul{
+       flex-wrap: wrap;
+       
+       }
+    }
+    .social_wrap{
+        padding-top: 40px;
+        padding-bottom: 40px;
+      
+
+       
+        .icon{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            border:1px solid $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                @include min(1200){
+                    transform: translateY(-5px);
+                }
+            }
+            
+
+            span{
+                font-size: 20px;
+            }
+        }
+       
+    }
+
+}
+.footer_area{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 2px solid hsla(0, 0%, 100%, .04);
+    
+    @include max(767.98){
+        flex-direction: column;
+        text-align: center;
+    }
+    p{
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+}

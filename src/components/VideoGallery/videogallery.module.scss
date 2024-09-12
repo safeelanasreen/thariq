@@ -1,0 +1,33 @@
+@import "../../styles/util";
+.videogallery{
+    color: $white;
+    h4{
+        color:$primary
+    }
+    .swiper_area{
+        padding-top: 60px;
+        width: 100%;
+        margin: 0 auto;
+        .video_banner{
+            overflow: hidden;
+        position: relative;
+        border-radius: 1.1111111111rem;
+        overflow: hidden;
+        padding-bottom: 100%;
+
+        @include min(1200){
+            padding-bottom: 40%;
+
+        }
+        video{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+            
+        }
+        }
+    }
+}

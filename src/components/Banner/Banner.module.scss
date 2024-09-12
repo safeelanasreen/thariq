@@ -1,0 +1,138 @@
+@import "../../styles/util";
+.banner{
+    color: $secondary;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    @include min(992){
+        height: calc(100vh - 95px);
+
+    }
+    
+    &_wrap{
+        row-gap: 40px;
+        @include max(991.98){
+            flex-direction: column-reverse;
+
+        }
+    }
+    &_content{
+        opacity: 0;
+        transition: all 0.8s ease-in-out;
+        transform: translateY(-100%);
+
+        
+    }
+    .intro,&_subttl{
+        font-size: 30px;
+        font-weight: 700;
+        span{
+            color: $primary;
+        }
+    }
+    &_desc{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .h1{
+        margin-bottom: 12px ;
+    }
+    &_subttl{
+        margin-bottom: 30px;
+    }
+    .intro{
+        margin-bottom: 12px;
+    }
+    .social_wrap{
+        color: white;
+        column-gap: 30px;
+        .icon{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            border:1px solid $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                @include min(1200){
+                    transform: translateY(-5px);
+                }
+            }
+            
+
+            span{
+                font-size: 20px;
+            }
+        }
+       
+    }
+    .img_wrap{
+       margin-left: auto;
+        @include min(1200){
+            max-width: 85%;
+
+
+        }
+
+       figure{
+        --bs-aspect-ratio:100%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: 0px 0px 30px 0px rgba(1,239,255,1);
+        img{
+            object-fit: cover;
+        }
+       
+    }
+}
+&.loaded{
+    .banner_content{
+        opacity: 1;
+        transform: translateY(0%);
+
+    }
+}
+
+}
+.background_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+    figure{
+        height: 100%;
+    -webkit-clip-path: circle(100% at 50% 50%);
+    clip-path: circle(100% at 50% 50%);
+    transition: clip-path 0.8s ease;
+    max-height:100%;
+    margin-bottom: 0;
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.banner{
+    &.loaded{
+        .background_img{
+            z-index: -1;
+            figure{
+                -webkit-clip-path: circle(22% at 50% 50%);
+    clip-path: circle(10% at 50% 20%);
+    @include min(1200){
+        clip-path: circle(20% at 74% 50%);
+
+    }
+            }
+        }
+    }
+}

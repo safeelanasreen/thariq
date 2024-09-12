@@ -1,0 +1,30 @@
+@import "../../styles/util";
+.gallery{
+    background-color: $white;
+    .links{
+        display: flex;
+    }
+    .tabs{
+        max-height: 355px;
+    color: #ffff;
+    cursor: pointer;
+    background-image: url(../../../public/images/2.jpg);
+    /* height: auto; */
+    height: 355px;
+    width: 8%;
+    transition: 0.2s all ease-in;
+    
+    &.active{
+        width: 68%;
+    }
+    }
+    .slide_wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
+    }
+   
+   
+}
