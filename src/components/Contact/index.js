@@ -54,7 +54,7 @@ const Contact = () => {
           <p>Copyright 2024, Thariq Ameer Group All rights reserved</p>
           <p>
             Designed by{" "}
-            <a href="https://safeelanasreen.github.io/portfolio-2/">Saffnazrin</a>
+            <a href="https://portfolio-safeela.vercel.app/">Saffnazrin</a>
           </p>
         </div>
       </div>
