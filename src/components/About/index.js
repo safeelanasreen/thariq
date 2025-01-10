@@ -25,9 +25,9 @@ const About = () => {
   }, [imgItemsLength]);
 
   return (
-    <Animate as="section"  className={`${Style.about} anim`} id="next" >
+    <Animate as="section" className={`${Style.about} anim`} id="next">
       <div className="container">
-        <div className="row align-items-center" >
+        <div className="row align-items-center">
           <Animate as="div" className="col-lg-6 anim">
             <div className={Style.img_anim}>
               <div className={`${Style.shape_1} about-shape1`}>
@@ -59,21 +59,18 @@ const About = () => {
               <h2 className="h2">About me</h2>
             </div>
             <p>
-              A versatile digital influencer with a passion for photography,
-              video editing, and creating engaging content that spreads
-              positivity. My journey in social media began with a love for
-              capturing life's moments and evolved into a platform where I
-              share family vlogs, new knowledge, and experiences from both
-              Qatar and India.   
-              As someone deeply interested in the automotive
-              world, I pride myself on knowing everything about cars and their
-              services in Qatar. Whether it's sharing insightful reviews,
-              offering maintenance tips, or exploring the latest automotive
-              trends, I strive to provide valuable content for car enthusiasts
-              and casual drivers alike. 
-              Join me as I continue to explore and
-              share the beauty of life, both behind the wheel and in front of
-              the camera, inspiring and educating others along the way!
+              Driven by a deep passion for the automotive world, I take pride in
+              knowing everything about cars and their services in Qatar. From
+              sharing insightful reviews and maintenance tips to exploring the
+              latest automotive trends, I aim to provide valuable content for
+              car enthusiasts and casual drivers alike. Alongside my automotive
+              interests, I am a versatile digital influencer with a love for
+              photography, video editing, and creating engaging content that
+              spreads positivity. My journey in social media began with
+              capturing life's moments and evolved into sharing family vlogs,
+              knowledge, and experiences from both Qatar and India. Join me as I
+              explore the beauty of life, both behind the wheel and through the
+              lens, inspiring and educating others along the way{" "}
             </p>
           </Animate>
         </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import "../../icomoon/style.css";
 import Style from "./Banner.module.scss";
 import Assets from "../Assets";
@@ -13,30 +13,33 @@ const Banner = () => {
     };
 
     // Add event listener for window load
-    window.addEventListener('load', handleLoad);
+    window.addEventListener("load", handleLoad);
 
     // Check if document is already loaded
-    if (document.readyState === 'complete') {
+    if (document.readyState === "complete") {
       handleLoad();
     }
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener('load', handleLoad);
+      window.removeEventListener("load", handleLoad);
     };
   }, []);
 
   // Define social media data as an array of objects
   const socialLinks = [
-    { href: 'https://www.facebook.com', icon: 'icon-facebook' },
-    { href: 'https://www.instagram.com', icon: 'icon-instagram' },
-    { href: 'https://www.youtube.com', icon: 'icon-youtube' },
-    { href: 'https://www.linkedin.com', icon: 'icon-linkedin2' },
-    { href: 'tel:+97430510542', icon: 'icon-phone' },
+    { href: "https://www.facebook.com", icon: "icon-facebook" },
+    { href: "https://www.instagram.com", icon: "icon-instagram" },
+    { href: "https://www.youtube.com", icon: "icon-youtube" },
+    { href: "https://www.linkedin.com", icon: "icon-linkedin2" },
+    { href: "tel:+97430510542", icon: "icon-phone" },
   ];
 
   return (
-    <section className={`${Style.banner} ${isLoaded ? Style.loaded : ''}`} id="banner">
+    <section
+      className={`${Style.banner} ${isLoaded ? Style.loaded : ""}`}
+      id="banner"
+    >
       <div className={Style.background_img}>
         <figure>
           <img src={Assets.thariq} alt="" />
@@ -48,12 +51,14 @@ const Banner = () => {
             <div className={Style.banner_content}>
               <p className={Style.intro}>Hello, It's me</p>
               <h1 className={`${Style.h1} h1`}>Thariq</h1>
-              <h2 className={Style.banner_subttl}>
-                And I'm a <span>Digital Influencer </span>
+              <h2 className={`${Style.banner_subttl} lh-base`}>
+                And I'm a <span>Service Advisor cum Digital Influencer</span>
               </h2>
               <p className={Style.banner_desc}>
-                Manager at TopCo and Digital Influencer, specializing in
-                strategic leadership and creating impactful online content.
+                Enthusiastic Service Advisor in the Automobile Field,
+                specializing in strategic leadership and creating impactful
+                online content. Passionate about automobiles and dedicated to
+                providing exceptional customer service.
               </p>
 
               {/* Map over the socialLinks array */}

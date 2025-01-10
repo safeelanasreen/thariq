@@ -27,17 +27,36 @@ const Services = () => {
         "Comprehensive care for your vehicle, ensuring top-notch maintenance, detailing, and protection.",
     },
     {
-      icon: "icon-developer",
-      title: "Web Development",
+      icon: "icon-car",
+      title: "Customization Services",
       description:
-        "Building responsive, user-friendly websites that blend creativity with functionality.",
+        "Enhance vehicle's style, comfort, and performance with customization  to reflect your unique personality and preferences.",
     },
     {
-      icon: "icon-webdesign",
-      title: "Website Design",
+      icon: "icon-car",
+      title: "polishing Services",
       description:
-        "Designing engaging and visually stunning websites that captivate and convert users.",
+        "Give stunning shine and renewed finish with professional polishing services that remove imperfections and restore its showroom look.",
     },
+    {
+      icon: "icon-wrench",
+      title: "Istihmar Services",
+      description:
+        "Efficient vehicle registration, renewal, and inspection for seamless compliance in Qatar.",
+    },
+    {
+      icon: "icon-car",
+      title: "Vehicle Service Photography",
+      description:
+        "Highlight your vehicle services with professional photography that captures every detail and showcases quality",
+    },
+    {
+      icon: "icon-developer",
+      title: "Social Media Marketing:",
+      description:
+        "Enhance your brand’s reach and engagement through tailored social media strategies and content.",
+    },
+
   ];
 
   return (
