@@ -52,13 +52,15 @@ const Banner = () => {
               <p className={Style.intro}>Hello, It's me</p>
               <h1 className={`${Style.h1} h1`}>Thariq</h1>
               <h2 className={`${Style.banner_subttl} lh-base`}>
-                And I'm a <span>Service Advisor cum Digital Influencer</span>
+                And I'm a <span>Digital Media Specialist & Videographer</span>
               </h2>
               <p className={Style.banner_desc}>
-                Enthusiastic Service Advisor in the Automobile Field,
-                specializing in strategic leadership and creating impactful
-                online content. Passionate about automobiles and dedicated to
-                providing exceptional customer service.
+                Creative and results-driven digital media specialist and
+                videographer with expertise in producing engaging content across
+                various industries. Skilled in video production, photography,
+                and social media management. Passionate about visual
+                storytelling and dedicated to enhancing brand presence through
+                impactful digital content.
               </p>
 
               {/* Map over the socialLinks array */}

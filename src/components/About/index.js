@@ -59,7 +59,7 @@ const About = () => {
               <h2 className="h2">About me</h2>
             </div>
             <p>
-              Driven by a deep passion for the automotive world, I take pride in
+              {/* Driven by a deep passion for the automotive world, I take pride in
               knowing everything about cars and their services in Qatar. From
               sharing insightful reviews and maintenance tips to exploring the
               latest automotive trends, I aim to provide valuable content for
@@ -70,7 +70,19 @@ const About = () => {
               capturing life's moments and evolved into sharing family vlogs,
               knowledge, and experiences from both Qatar and India. Join me as I
               explore the beauty of life, both behind the wheel and through the
-              lens, inspiring and educating others along the way{" "}
+              lens, inspiring and educating others along the way */}
+              Driven by a passion for digital media, I am a versatile content
+              creator, videographer, and photographer, skilled in video editing
+              and producing engaging content that informs, entertains, and
+              spreads positivity. My journey in social media began with
+              capturing life's moments and evolved into sharing family vlogs,
+              knowledge, and experiences from both Qatar and India. Alongside my
+              digital media expertise, I have a deep passion for the automotive
+              world sharing insightful reviews, maintenance tips, and exploring
+              the latest trends to provide valuable content for car enthusiasts
+              and casual drivers alike. Join me as I inspire and educate others
+              through compelling visuals, storytelling, and a love for both life
+              and cars.
             </p>
           </Animate>
         </div>

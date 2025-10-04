@@ -5,6 +5,18 @@ const Services = () => {
   const cardData = [
     {
       icon: "icon-car",
+      title: "Vehicle Service Photography",
+      description:
+        "Highlight your vehicle services with professional photography that captures every detail and showcases quality",
+    },
+    {
+      icon: "icon-developer",
+      title: "Social Media Marketing:",
+      description:
+        "Enhance your brand’s reach and engagement through tailored social media strategies and content.",
+    },
+    {
+      icon: "icon-car",
       title: "Car Modification",
       description: "Transforming cars with custom designs and performance boosts.",
     },
@@ -43,19 +55,8 @@ const Services = () => {
       title: "Istihmar Services",
       description:
         "Efficient vehicle registration, renewal, and inspection for seamless compliance in Qatar.",
-    },
-    {
-      icon: "icon-car",
-      title: "Vehicle Service Photography",
-      description:
-        "Highlight your vehicle services with professional photography that captures every detail and showcases quality",
-    },
-    {
-      icon: "icon-developer",
-      title: "Social Media Marketing:",
-      description:
-        "Enhance your brand’s reach and engagement through tailored social media strategies and content.",
-    },
+    }
+ 
 
   ];
 

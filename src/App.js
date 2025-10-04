@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import Services from "./components/Services";
-import Gallery from "./components/Gallery";
+// import Gallery from "./components/Gallery";
 import VideoGallery from "./components/VideoGallery";
 import Contact from "./components/Contact";
 
@@ -18,7 +18,7 @@ function App() {
       <VideoGallery />
       <Services/>
 
-      <Gallery />
+      {/* <Gallery /> */}
 
       <Contact />
       </div>
